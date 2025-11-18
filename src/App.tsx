@@ -1,10 +1,12 @@
+import { FormTextField } from "./ui/textField/FormTextField";
+import { TextField } from "./ui/textField/TextField";
+
 function App() {
   return (
-    <>
-      <div className="text-3xl font-bold underline">
-        <h1>Hello World</h1>
-      </div>
-    </>
+    <div className="flex flex-col gap-4 p-4">
+      <TextField />
+      <FormTextField label="Name" placeholder="Enter your name" />
+    </div>
   );
 }
 

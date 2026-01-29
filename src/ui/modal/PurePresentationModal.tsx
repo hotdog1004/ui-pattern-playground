@@ -9,7 +9,7 @@ type PurePresentationModalProps = {
 
 /**
  * UI 렌더링만 담당하는 프레젠테이션용 모달
- * Modal UI는 순수한 UI이므로, 스타일 작업, 스토리죽 작성에 좋음
+ * Modal UI는 순수한 UI이므로, 스타일 작업, 스토리북 작성에 좋음
  * HOC 쪽에서 open, close 로직 재사용할 수 있음
  *
  */

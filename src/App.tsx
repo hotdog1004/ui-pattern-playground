@@ -1,3 +1,4 @@
+import { ExampleUsedCustomHook } from "./ui/modal/ExampleUsedCustomHook";
 import { LocalStateModal } from "./ui/modal/LocalStateModal";
 import { SlotExampleBasic } from "./ui/modal/SlotExampleBasic";
 import { FormTextField } from "./ui/textField/FormTextField";
@@ -10,6 +11,7 @@ function App() {
       <FormTextField label="Name" placeholder="Enter your name" />
       <LocalStateModal />
       <SlotExampleBasic />
+      <ExampleUsedCustomHook />
     </div>
   );
 }

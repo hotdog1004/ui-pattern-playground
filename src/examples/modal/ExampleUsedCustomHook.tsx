@@ -1,5 +1,5 @@
 import { useModal } from "../../hooks/useModal";
-import { PurePresentationModal } from "./PurePresentationModal";
+import { PurePresentationModal } from "../../ui/modal/PurePresentationModal";
 
 /**
  * useModal 커스텀 훅을 사용한 모달 컴포넌트

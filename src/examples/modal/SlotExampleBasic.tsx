@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PurePresentationModal } from "./PurePresentationModal";
+import { PurePresentationModal } from "../../ui/modal/PurePresentationModal";
 
 /**
  * PurePresentationModal을 사용한 모달 컴포넌트

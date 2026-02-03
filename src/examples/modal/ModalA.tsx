@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { PortalModalShell } from "./PortalModalShell";
+import { PortalModalShell } from "../../ui/modal/PortalModalShell";
 
 type ModalAProps = {
   open: boolean;

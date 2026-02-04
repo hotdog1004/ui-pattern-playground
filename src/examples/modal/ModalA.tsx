@@ -7,6 +7,10 @@ type ModalAProps = {
   title?: string;
   children?: ReactNode;
 };
+
+/**
+ * Props를 전달 받는 모달 컴포넌트
+ */
 export const ModalA = ({ open, onClose, title, children }: ModalAProps) => {
   return (
     <PortalModalShell open={open} onClose={onClose}>

@@ -2,10 +2,11 @@ import { useState } from "react";
 import { LocalStateModal } from "../../examples/modal/LocalStateModal";
 import { SlotExampleBasic } from "../../examples/modal/SlotExampleBasic";
 import { ExampleUsedCustomHook } from "../../examples/modal/ExampleUsedCustomHook";
-import { ModalA } from "../../examples/modal/ModalA";
+import { ModalA, ModalB } from "../../examples/modal";
 
 const ModalPage = () => {
-  const [open, setOpen] = useState(false);
+  const [modalAOpen, setModalAOpen] = useState(false);
+  const [modalBOpen, setModalBOpen] = useState(false);
 
   return (
     <div className="flex flex-col gap-6 p-6">
@@ -28,10 +29,27 @@ const ModalPage = () => {
 
       <section>
         <h2 className="text-lg font-semibold mb-2">ModalA (Controlled)</h2>
-        <button onClick={() => setOpen(true)}>Open Modal A</button>
-        <ModalA open={open} onClose={() => setOpen(false)} title="Modal A">
+        <button onClick={() => setModalAOpen(true)}>Open Modal A</button>
+        <ModalA
+          open={modalAOpen}
+          onClose={() => setModalAOpen(false)}
+          title="Modal A"
+        >
           <p>Modal A Content</p>
         </ModalA>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-semibold mb-2">
+          ModalB (Compound Component)
+        </h2>
+        <ModalB.Root open={modalBOpen} onOpenChange={setModalBOpen}>
+          <ModalB.Trigger>Open Modal B</ModalB.Trigger>
+          <ModalB.Content>
+            <p>Modal B Content</p>
+            <ModalB.Close>Close Modal B</ModalB.Close>
+          </ModalB.Content>
+        </ModalB.Root>
       </section>
     </div>
   );

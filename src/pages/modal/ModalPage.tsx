@@ -3,10 +3,12 @@ import { LocalStateModal } from "../../examples/modal/LocalStateModal";
 import { SlotExampleBasic } from "../../examples/modal/SlotExampleBasic";
 import { ExampleUsedCustomHook } from "../../examples/modal/ExampleUsedCustomHook";
 import { ModalA, ModalB } from "../../examples/modal";
+import { useModalService } from "../../examples/modal/ModalCContext";
 
 const ModalPage = () => {
   const [modalAOpen, setModalAOpen] = useState(false);
   const [modalBOpen, setModalBOpen] = useState(false);
+  const { openModal } = useModalService();
 
   return (
     <div className="flex flex-col gap-6 p-6">
@@ -50,6 +52,22 @@ const ModalPage = () => {
             <ModalB.Close>Close Modal B</ModalB.Close>
           </ModalB.Content>
         </ModalB.Root>
+      </section>
+
+      <section>
+        <h2 className="text-lg font-semibold mb-2">ModalC (Global Context)</h2>
+        <button
+          onClick={() =>
+            openModal(
+              <>
+                <h2 className="text-lg font-semibold">C 모달</h2>
+                <p className="mt-3">전역 Provider 기반</p>
+              </>
+            )
+          }
+        >
+          Open Modal C
+        </button>
       </section>
     </div>
   );
